@@ -1,0 +1,4 @@
+﻿  Source.cpp
+E:\programming-2022-2023\2022.09.22-Homework-3\domashka 2\Source.cpp(30,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\programming-2022-2023\2022.09.22-Homework-3\domashka 2\Source.cpp(36,6): warning C4101: sum: неиспользованная локальная переменная
+E:\programming-2022-2023\2022.09.22-Homework-3\domashka 2\Source.cpp(32): error C4700: использована неинициализированная локальная переменная "m"
