@@ -1,0 +1,12 @@
+﻿  Source.cpp
+c:\users\st091468\source\repos\2023.05.04-async\project3\source.cpp(42): error C2664: "void std::vector<std::future<void>,std::allocator<_Ty>>::push_back(_Ty &&)": невозможно преобразовать аргумент 1 из "std::future<double>" в "const _Ty &"
+          with
+          [
+              _Ty=std::future<void>
+          ]
+  c:\users\st091468\source\repos\2023.05.04-async\project3\source.cpp(42): note: Причина: невозможно преобразовать "std::future<double>" в "const _Ty"
+          with
+          [
+              _Ty=std::future<void>
+          ]
+  c:\users\st091468\source\repos\2023.05.04-async\project3\source.cpp(42): note: Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
