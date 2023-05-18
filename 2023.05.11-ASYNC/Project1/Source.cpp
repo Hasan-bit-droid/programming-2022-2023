@@ -1,28 +1,27 @@
 //zadacha 2 , f-ya prinimayushaya 2 stroki
 #include <iostream>
 #include <cmath>
-#include <vector>
 #include <future>
 #include <chrono>
 #include <algorithm>
+#include <string>
+#include <istream>
 
 
 using namespace std::chrono;
 using namespace std;
 
-const int n = 100000;
 
-
-int block_size(int threads)
+int block_size(int threads, int n)
 {
 	return n / threads + (n % threads ? 1 : 0);
 }
 
 int count (string s, string what, int a, int b)
 {
-	int bs = block_size(a);
+	int bs = block_size(a, s.size());
 	int k = 0;
-	for (int i = b; i < min(b + bs, s.size()); i++)
+	for (int i = b; i < min<int>(b + bs, s.size()); i++)
 		if (s.substr(i, what.size()) == what)
 			k++;
 	return k;
@@ -30,10 +29,10 @@ int count (string s, string what, int a, int b)
 int MultiThreadTable(int a, string s, string what)
 {
 	vector<future <int>> fut;
-	int bl_size = block_size(a);
+	int bl_size = block_size(a, s.size());
 	int b = 0;
 	int i = 0;
-	while (b < n)
+	while (b < s.size())
 	{
 		fut.push_back(async(count, s, what, a, b));
 		b += bl_size;
